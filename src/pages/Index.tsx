@@ -4,7 +4,7 @@ import {
   Cpu, Zap, Clock, Users, Target, Briefcase, Building2,
   TrendingUp, Award, Shield, Lightbulb, BookOpen, Wrench,
   MessageSquare, BarChart3, Brain, Layers, Rocket, CheckCircle2,
-  MapPin, Calendar, ArrowRight, Sparkles, Play
+  MapPin, Calendar, ArrowRight, Sparkles, Play, BadgeCheck
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpeg";
 import audience1 from "@/assets/audience-1.jpeg";
