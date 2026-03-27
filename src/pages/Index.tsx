@@ -414,6 +414,54 @@ const Index = () => {
         </Animate>
       </Section>
 
+      {/* ── ОТЗЫВЫ ── */}
+      <Section className="py-24 lg:py-32">
+        <Animate>
+          <SectionBadge icon={MessageSquare} label="Отзывы" />
+          <h2 className="mb-4 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
+            Что говорят{" "}
+            <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+              участники
+            </span>
+          </h2>
+          <p className="mx-auto mb-16 max-w-lg text-center text-base text-muted-foreground text-pretty">
+            Реальные отзывы участников мероприятий Сергея
+          </p>
+        </Animate>
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              name: "Kristina",
+              text: "Сегодня применила полученные на вчерашней встрече знания, и не могу не поделиться с Вами своими успехами: рутинную работу, на которую я потратила бы несколько часов, я выполнила всего за полчаса, причем качество получилось на порядок выше. Огромная Вам благодарность за полезный контент без воды 🙏❤️",
+            },
+            {
+              name: "Polina Bessmertnaya",
+              text: "Сережа, еще раз спасибо за шикарное мероприятие! Ты как всегда меня вдохновил! Завтра вместо безделья в офисе буду накидывать план использования ИИ в жизни — а то прогресс летит вперед, а я почему-то отстаю)",
+            },
+            {
+              name: "Юлия Бевзенко",
+              text: "Сергей обозначил некоторые пункты, о которых я еще не задумывалась. А именно не использовать только для креативных задач, а использовать для рутинных и именно ненавистных задач. Я для себя записала несколько инсайтов. Это было незабываемо.",
+            },
+          ].map((review, i) => (
+            <Animate key={i} delay={i * 100}>
+              <GlassCard className="flex h-full flex-col p-6 sm:p-7">
+                {/* Quote icon */}
+                <span className="mb-4 text-4xl leading-none text-primary/40">"</span>
+                <p className="mb-6 flex-1 text-[15px] leading-relaxed text-muted-foreground text-pretty">
+                  {review.text}
+                </p>
+                <div className="flex items-center gap-3 border-t border-border/40 pt-5">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+                    {review.name[0]}
+                  </span>
+                  <span className="text-sm font-semibold text-foreground">{review.name}</span>
+                </div>
+              </GlassCard>
+            </Animate>
+          ))}
+        </div>
+      </Section>
+
       {/* ── FOOTER ── */}
       <footer className="py-12">
         <div className="mx-auto max-w-[1120px] px-5 sm:px-8 lg:px-10">
