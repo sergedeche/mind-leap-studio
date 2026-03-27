@@ -174,9 +174,9 @@ function ScrollRevealText({ text }: { text: string }) {
   const words = useMemo(() => text.split(" "), [text]);
 
   return (
-    <div ref={containerRef} className="relative py-6 sm:py-8 lg:py-10 px-5 sm:px-8 lg:px-10">
+    <div ref={containerRef} className="relative py-0 px-5 sm:px-8 lg:px-10">
       <div className="mx-auto max-w-4xl text-center">
-        <p className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.15] tracking-tight text-balance">
+        <p className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-[1.2] tracking-tight text-balance">
           {words.map((word, i) => {
             const start = i / words.length;
             const end = start + 1 / words.length;
@@ -284,7 +284,7 @@ const Index = () => {
       <ScrollRevealText text="Как использовать ИИ в работе, чтобы получить максимум результатов и опередить конкурентов" />
 
       {/* ── ВЫ УЗНАЕТЕ ── */}
-      <Section id="learn" className="py-28 lg:py-36">
+      <Section id="learn" className="py-20 lg:py-24">
         <Animate>
           <SectionBadge icon={BookOpen} label="Вы узнаете" />
           <h2 className="mb-4 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
