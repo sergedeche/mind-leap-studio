@@ -174,7 +174,7 @@ function ScrollRevealText({ text }: { text: string }) {
   const words = useMemo(() => text.split(" "), [text]);
 
   return (
-    <div ref={containerRef} className="relative py-12 sm:py-16 lg:py-20 px-5 sm:px-8 lg:px-10">
+    <div ref={containerRef} className="relative py-6 sm:py-8 lg:py-10 px-5 sm:px-8 lg:px-10">
       <div className="mx-auto max-w-4xl text-center">
         <p className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.15] tracking-tight text-balance">
           {words.map((word, i) => {
@@ -201,9 +201,9 @@ function ScrollWord({
   progress: ReturnType<typeof useScroll>["scrollYProgress"];
   range: [number, number];
 }) {
-  const opacity = useTransform(progress, range, [0.08, 1]);
-  const color = useTransform(opacity, [0.08, 1], [
-    "hsl(var(--muted-foreground) / 0.12)",
+  const opacity = useTransform(progress, range, [0.04, 1]);
+  const color = useTransform(opacity, [0.04, 1], [
+    "hsl(var(--muted-foreground) / 0.06)",
     "hsl(var(--foreground))",
   ]);
 
