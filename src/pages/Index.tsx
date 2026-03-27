@@ -1,5 +1,5 @@
-import { useEffect, useRef, useCallback, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { useEffect, useRef, useCallback, useState, useMemo } from "react";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import {
   Cpu, Zap, Clock, Users, Target, Briefcase, Building2,
   TrendingUp, Award, Shield, Lightbulb, BookOpen, Wrench,
