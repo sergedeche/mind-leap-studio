@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useCallback, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import {
   Cpu, Zap, Clock, Users, Target, Briefcase, Building2,
