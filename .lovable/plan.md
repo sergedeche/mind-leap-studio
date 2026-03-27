@@ -1,22 +1,36 @@
 
 
-# Fix: Blank Preview
+## Лендинг для мастер-класса по ИИ — «Код стратегического превосходства»
 
-## Problem
-The preview is blank — React isn't rendering. The code looks syntactically correct, so this is likely a runtime crash during render. The most probable causes:
+Тёмный технологичный дизайн с фиолетовыми/неоновыми акцентами (как на приложенном изображении). Фоновое изображение будет использовано в hero-секции.
 
-1. **CSS `animate-glow-pulse` class** — used in line 244 as `animate-glow-pulse`, and while it IS defined in tailwind.config.ts, there could be a Tailwind compilation issue
-2. **A silent runtime error** from framer-motion or embla-carousel that crashes the entire React tree (no ErrorBoundary)
+### Секции лендинга:
 
-## Plan
+1. **Hero** — заголовок «Код стратегического превосходства», подзаголовок «Как использовать ИИ в работе, чтобы получить максимум», CTA-кнопка «Предзапись», фоновое изображение с оверлеем
 
-1. **Add an ErrorBoundary** wrapper in `App.tsx` to catch and display render errors instead of showing a blank screen
-2. **Force a clean re-render** by making a small safe edit to `src/pages/Index.tsx` (e.g., add a comment) to trigger Vite HMR rebuild — this often fixes stale build states
-3. If still blank, **temporarily simplify** the Index page to isolate which component is causing the crash (remove ScrollRevealText and TestimonialsCarousel, then add them back one by one)
+2. **На мастер-классе вы узнаете** — 5 пунктов с иконками (инструменты, автоматизация, время, команда, решения)
 
-## Technical Details
+3. **Для кого** — карточки для целевой аудитории (управленцы, собственники бизнеса)
 
-- The blank preview with no console errors typically means the build itself failed silently or a top-level import crashes before React mounts
-- Adding an ErrorBoundary will make future crashes visible
-- A forced rebuild via minor edit is the quickest diagnostic step
+4. **После мастер-класса вы** — 4 результата с визуальными акцентами
+
+5. **Почему важно идти сейчас** — 3 блока с статистикой (5% → 50%)
+
+6. **Чем отличается** — 5 преимуществ в карточках
+
+7. **Программа** — 6 блоков с нумерацией, описанием каждого блока
+
+8. **Формат** — информация о формате (офлайн, 4 часа, личное общение)
+
+9. **Ближайший мастер-класс** — дата, цена 14 900 ₽, CTA «Предзапись»
+
+10. **Автор** — Сергей Черненко, краткая биография
+
+11. **Футер** — юридическая информация (ИП, ИНН, ОГРН), ссылки на политику конфиденциальности и оферту
+
+### Дизайн:
+- Тёмный фон (#0a0a1a), фиолетовые градиенты и свечения
+- Тонкие линии, glow-эффекты, анимации при скролле
+- Шрифт: Inter/системный sans-serif
+- Адаптивная вёрстка (мобильная и десктопная версия)
 

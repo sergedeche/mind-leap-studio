@@ -378,6 +378,30 @@ const Index = () => {
         </div>
       </Section>
 
+      {/* ── СТАТИСТИКА ── */}
+      <Section className="py-24 lg:py-32">
+        <Animate>
+          <GlassCard hover={false} className="p-10 sm:p-16 lg:p-20">
+            <SectionBadge icon={BarChart3} label="Статистика" />
+            <h2 className="mb-4 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
+              Почему{" "}
+              <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                важно
+              </span>{" "}
+              идти сейчас
+            </h2>
+            <p className="mx-auto mb-14 max-w-md text-center text-base text-muted-foreground text-pretty">
+              Рынок ИИ стремительно растёт — те, кто начнёт сейчас, получат преимущество
+            </p>
+            <div className="grid gap-10 sm:grid-cols-3">
+              <StatCard stat="5%" label="компаний используют ИИ стратегически" delay={0} />
+              <StatCard stat="→ 50%" label="будут использовать к 2027 году" delay={100} />
+              <StatCard stat="3×" label="рост продуктивности при грамотном внедрении" delay={200} />
+            </div>
+          </GlassCard>
+        </Animate>
+      </Section>
+
       {/* ── ЧЕМ ОТЛИЧАЕТСЯ ── */}
       <Section className="py-24 lg:py-32">
         <Animate>
