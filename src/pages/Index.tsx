@@ -1,5 +1,5 @@
-import { useEffect, useRef, useCallback, useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { useEffect, useRef, useCallback, useState, useMemo } from "react";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import {
   Cpu, Zap, Clock, Users, Target, Briefcase, Building2,
   TrendingUp, Award, Shield, Lightbulb, BookOpen, Wrench,
@@ -163,6 +163,56 @@ function TestimonialsCarousel() {
     </div>
   );
 }
+/* ─── scroll reveal text (Nubien-style) ─── */
+function ScrollRevealText({ text }: { text: string }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start 0.9", "start 0.15"],
+  });
+
+  const words = useMemo(() => text.split(" "), [text]);
+
+  return (
+    <div ref={containerRef} className="relative py-28 sm:py-36 lg:py-44 px-5 sm:px-8 lg:px-10">
+      <div className="mx-auto max-w-4xl text-center">
+        <p className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.15] tracking-tight text-balance">
+          {words.map((word, i) => {
+            const start = i / words.length;
+            const end = start + 1 / words.length;
+            return (
+              <ScrollWord key={i} progress={scrollYProgress} range={[start, end]}>
+                {word}
+              </ScrollWord>
+            );
+          })}
+        </p>
+      </div>
+    </div>
+  );
+}
+
+function ScrollWord({
+  children,
+  progress,
+  range,
+}: {
+  children: string;
+  progress: ReturnType<typeof useScroll>["scrollYProgress"];
+  range: [number, number];
+}) {
+  const opacity = useTransform(progress, range, [0.15, 1]);
+  const color = useTransform(opacity, [0.15, 1], [
+    "hsl(var(--muted-foreground) / 0.2)",
+    "hsl(var(--foreground))",
+  ]);
+
+  return (
+    <motion.span style={{ color }} className="inline-block mr-[0.25em] transition-none">
+      {children}
+    </motion.span>
+  );
+}
 
 
 const Index = () => {
@@ -229,6 +279,9 @@ const Index = () => {
           </Animate>
         </Section>
       </header>
+
+      {/* ── SCROLL REVEAL TEXT ── */}
+      <ScrollRevealText text="Как использовать ИИ в работе, чтобы получить максимум результатов и опередить конкурентов" />
 
       {/* ── ВЫ УЗНАЕТЕ ── */}
       <Section id="learn" className="py-28 lg:py-36">
