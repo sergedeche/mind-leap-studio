@@ -9,6 +9,7 @@ import {
 import heroBg from "@/assets/hero-bg.jpeg";
 import audience1 from "@/assets/audience-1.jpeg";
 import audience2 from "@/assets/audience-2.jpeg";
+import speakerImg from "@/assets/speaker.jpeg";
 
 /* ─── animated section wrapper ─── */
 function Animate({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
@@ -395,16 +396,20 @@ const Index = () => {
           </h2>
         </Animate>
         <Animate delay={120}>
-          <GlassCard hover={false} className="mx-auto max-w-2xl p-8 sm:p-12">
-            <div className="mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 text-2xl font-bold text-primary ring-1 ring-primary/20">
-              СЧ
+          <GlassCard hover={false} className="mx-auto max-w-2xl overflow-hidden p-0">
+            <div className="flex flex-col sm:flex-row">
+              <div className="sm:w-2/5">
+                <img src={speakerImg} alt="Сергей Черненко" className="h-64 w-full object-cover object-top sm:h-full" />
+              </div>
+              <div className="flex flex-col justify-center p-6 sm:w-3/5 sm:p-8">
+                <h3 className="mb-1.5 text-2xl font-bold text-foreground">Сергей Черненко</h3>
+                <ul className="mt-4 space-y-3 text-[15px] leading-relaxed text-muted-foreground">
+                  <li className="flex gap-2.5"><BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span>Эксперт с 20+ летним опытом в международных компаниях, Совет директоров</span></li>
+                  <li className="flex gap-2.5"><BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span>Основатель агентства по автоматизации бизнеса через ИИ</span></li>
+                  <li className="flex gap-2.5"><BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span>Автор курсов по нетворкингу, карьерному росту, публичным выступлениям и ИИ</span></li>
+                </ul>
+              </div>
             </div>
-            <h3 className="mb-1.5 text-2xl font-bold text-foreground">Сергей Черненко</h3>
-            <p className="mb-5 text-sm font-medium text-primary">Эксперт по внедрению ИИ в бизнес</p>
-            <p className="text-[15px] leading-relaxed text-muted-foreground text-pretty">
-              Практик с опытом внедрения ИИ-решений в российские компании. Помогает руководителям и собственникам бизнеса
-              использовать искусственный интеллект как стратегический инструмент для роста, автоматизации и принятия решений.
-            </p>
           </GlassCard>
         </Animate>
       </Section>
