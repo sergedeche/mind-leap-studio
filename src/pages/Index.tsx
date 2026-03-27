@@ -284,7 +284,7 @@ const Index = () => {
       <ScrollRevealText text="Как использовать ИИ в работе, чтобы получить максимум результатов и опередить конкурентов" />
 
       {/* ── ВЫ УЗНАЕТЕ ── */}
-      <Section id="learn" className="py-28 lg:py-36">
+      <Section id="learn" className="py-20 lg:py-24">
         <Animate>
           <SectionBadge icon={BookOpen} label="Вы узнаете" />
           <h2 className="mb-4 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
