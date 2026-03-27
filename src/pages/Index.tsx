@@ -206,11 +206,11 @@ const Index = () => {
             <Animate key={i} delay={i * 120}>
               <div className="group relative h-full overflow-hidden rounded-2xl border border-border/60">
                 {/* Background image */}
-                <img src={item.img} alt="" className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img src={item.img} alt="" className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/30" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-transparent" />
                 {/* Content */}
-                <div className="relative z-10 flex h-full min-h-[320px] flex-col justify-end p-8 sm:p-10">
+                <div className="relative z-10 flex h-full min-h-[420px] flex-col justify-end p-8 sm:p-10">
                   <span className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary ring-1 ring-primary/20 backdrop-blur-sm">
                     <item.icon className="h-7 w-7" />
                   </span>
