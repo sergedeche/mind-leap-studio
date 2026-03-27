@@ -7,6 +7,8 @@ import {
   MapPin, Calendar, ArrowRight, Sparkles, Play
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpeg";
+import audience1 from "@/assets/audience-1.jpeg";
+import audience2 from "@/assets/audience-2.jpeg";
 
 /* ─── animated section wrapper ─── */
 function Animate({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
