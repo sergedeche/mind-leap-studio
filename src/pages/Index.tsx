@@ -4,7 +4,7 @@ import {
   Cpu, Zap, Clock, Users, Target, Briefcase, Building2,
   TrendingUp, Award, Shield, Lightbulb, BookOpen, Wrench,
   MessageSquare, BarChart3, Brain, Layers, Rocket, CheckCircle2,
-  MapPin, Calendar, ArrowRight, Sparkles, Play
+  MapPin, Calendar, ArrowRight, Sparkles, Play, BadgeCheck
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpeg";
 import audience1 from "@/assets/audience-1.jpeg";
@@ -166,22 +166,19 @@ const Index = () => {
             Практические знания, которые можно применить уже на следующий день
           </p>
         </Animate>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto max-w-2xl space-y-5">
           {[
-            { icon: Wrench, title: "Инструменты ИИ", text: "Какие инструменты реально работают и как их внедрять без лишних затрат" },
-            { icon: Zap, title: "Автоматизация", text: "Как автоматизировать рутину и ускорить процессы с помощью нейросетей" },
-            { icon: Clock, title: "Время и деньги", text: "Где вы теряете время и деньги — и как ИИ это исправит" },
-            { icon: Users, title: "Команда", text: "Как выстроить команду, которая работает с ИИ эффективно" },
-            { icon: Target, title: "Решения", text: "Как принимать стратегические решения, опираясь на данные и ИИ-аналитику" },
+            "Какие инструменты ИИ реально работают и как их внедрять без лишних затрат",
+            "Как автоматизировать рутину и ускорить процессы с помощью нейросетей",
+            "Где вы теряете время и деньги — и как ИИ это исправит",
+            "Как выстроить команду, которая работает с ИИ эффективно",
+            "Как принимать стратегические решения, опираясь на данные и ИИ-аналитику",
           ].map((item, i) => (
             <Animate key={i} delay={i * 80}>
-              <GlassCard className="h-full p-6 sm:p-7">
-                <span className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary ring-1 ring-primary/20">
-                  <item.icon className="h-5 w-5" />
-                </span>
-                <h3 className="mb-2 text-base font-semibold text-foreground">{item.title}</h3>
-                <p className="text-sm leading-relaxed text-muted-foreground text-pretty">{item.text}</p>
-              </GlassCard>
+              <div className="flex items-start gap-4">
+                <BadgeCheck className="mt-0.5 h-6 w-6 shrink-0 text-primary" />
+                <span className="text-lg text-muted-foreground">{item}</span>
+              </div>
             </Animate>
           ))}
         </div>
