@@ -176,7 +176,7 @@ function ScrollRevealText({ text }: { text: string }) {
   return (
     <div ref={containerRef} className="relative py-0 px-5 sm:px-8 lg:px-10">
       <div className="mx-auto max-w-4xl text-center">
-        <p className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.15] tracking-tight text-balance">
+        <p className="text-2xl sm:text-3xl lg:text-4xl font-bold leading-[1.2] tracking-tight text-balance">
           {words.map((word, i) => {
             const start = i / words.length;
             const end = start + 1 / words.length;
