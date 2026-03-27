@@ -280,6 +280,8 @@ const Index = () => {
         </Section>
       </header>
 
+      {/* ── SCROLL REVEAL TEXT ── */}
+      <ScrollRevealText text="Как использовать ИИ в работе, чтобы получить максимум результатов и опередить конкурентов" />
 
       {/* ── ВЫ УЗНАЕТЕ ── */}
       <Section id="learn" className="py-20 lg:py-24">
