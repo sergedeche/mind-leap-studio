@@ -174,7 +174,7 @@ function ScrollRevealText({ text }: { text: string }) {
   const words = useMemo(() => text.split(" "), [text]);
 
   return (
-    <div ref={containerRef} className="relative py-6 sm:py-8 lg:py-10 px-5 sm:px-8 lg:px-10">
+    <div ref={containerRef} className="relative py-0 px-5 sm:px-8 lg:px-10">
       <div className="mx-auto max-w-4xl text-center">
         <p className="text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.15] tracking-tight text-balance">
           {words.map((word, i) => {
