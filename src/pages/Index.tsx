@@ -90,7 +90,80 @@ function StatCard({ stat, label, delay }: { stat: string; label: string; delay: 
   );
 }
 
-/* ════════════════════════  PAGE  ════════════════════════ */
+const testimonials = [
+  "Сегодня применила полученные на вчерашней встрече знания, и не могу не поделиться с Вами своими успехами: рутинную работу, на которую я потратила бы несколько часов, я выполнила всего за полчаса, причем качество получилось на порядок выше. Огромная Вам благодарность за полезный контент без воды",
+  "Сережа, еще раз спасибо за шикарное мероприятие! Ты как всегда меня вдохновил! Завтра вместо безделья в офисе буду накидывать план использования ИИ в жизни — а то прогресс летит вперед, а я почему-то отстаю)",
+  "Сергей обозначил некоторые пункты, о которых я еще не задумывалась. А именно не использовать только для креативных задач, а использовать для рутинных и именно ненавистных задач. Я для себя записала несколько инсайтов. Это было незабываемо.",
+  "Я очень благодарна Сергею Черненко за то, что он пригласил меня на этот потрясающий мастер-класс. И как маркетолог я использую искусственный интеллект в ряде выполнений своих задач. Но сегодня я посмотрела на этот инструмент совершенно иначе и начну использовать все больше и больше возможностей, повышая и свою эффективность, и эффективность команды, с которой я работаю. Потрясающе!",
+  "Сегодня Сергей открыл для меня очень большой мир, в котором я еще не бывала. Он показал мне новые разные функции и возможности чата GPT. Он показал разные возможности использования рутинных задач и делегирования искусственному интеллекту. Я узнала о тех приложениях, о которых не знала, и у меня возникло уже куча идей. Очень рекомендую к посещению всем руководителям, директорам разных направлений. Отдельная благодарность Сергею за организацию на высшем уровне подачи материала, очень интересная проработка кейсов. Сразу практика.",
+];
+
+function TestimonialsCarousel() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start", loop: true, skipSnaps: false });
+  const [selected, setSelected] = useState(0);
+  const [count, setCount] = useState(0);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelected(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    setCount(emblaApi.scrollSnapList().length);
+    onSelect();
+    emblaApi.on("select", onSelect);
+    return () => { emblaApi.off("select", onSelect); };
+  }, [emblaApi, onSelect]);
+
+  return (
+    <div className="relative">
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex gap-5">
+          {testimonials.map((text, i) => (
+            <div key={i} className="min-w-0 flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]">
+              <GlassCard className="flex h-full flex-col p-6 sm:p-7">
+                <span className="mb-4 text-4xl leading-none text-primary/40">"</span>
+                <p className="flex-1 text-[15px] leading-relaxed text-muted-foreground text-pretty">
+                  {text}
+                </p>
+              </GlassCard>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Navigation */}
+      <div className="mt-8 flex items-center justify-center gap-4">
+        <button
+          onClick={() => emblaApi?.scrollPrev()}
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card/60 text-muted-foreground backdrop-blur-sm transition-colors hover:bg-card hover:text-foreground"
+          aria-label="Предыдущий"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
+        <div className="flex gap-2">
+          {Array.from({ length: count }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => emblaApi?.scrollTo(i)}
+              className={`h-2 rounded-full transition-all duration-300 ${i === selected ? "w-6 bg-primary" : "w-2 bg-muted-foreground/30"}`}
+              aria-label={`Отзыв ${i + 1}`}
+            />
+          ))}
+        </div>
+        <button
+          onClick={() => emblaApi?.scrollNext()}
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card/60 text-muted-foreground backdrop-blur-sm transition-colors hover:bg-card hover:text-foreground"
+          aria-label="Следующий"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </button>
+      </div>
+    </div>
+  );
+}
+
 
 const Index = () => {
   return (
