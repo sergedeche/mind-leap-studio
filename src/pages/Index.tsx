@@ -201,9 +201,9 @@ function ScrollWord({
   progress: ReturnType<typeof useScroll>["scrollYProgress"];
   range: [number, number];
 }) {
-  const opacity = useTransform(progress, range, [0.08, 1]);
-  const color = useTransform(opacity, [0.08, 1], [
-    "hsl(var(--muted-foreground) / 0.12)",
+  const opacity = useTransform(progress, range, [0.04, 1]);
+  const color = useTransform(opacity, [0.04, 1], [
+    "hsl(var(--muted-foreground) / 0.06)",
     "hsl(var(--foreground))",
   ]);
 
