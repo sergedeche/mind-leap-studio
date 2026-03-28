@@ -309,7 +309,7 @@ const Index = () => {
           </Animate>
 
           <Animate delay={100}>
-            <h1 className="mx-auto mb-6 max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl text-balance">
+            <h1 className="mx-auto mb-10 max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl text-balance">
               Код стратегического{" "}
               <span className="bg-gradient-to-r from-primary via-primary to-primary/60 bg-clip-text text-transparent">
                 превосходства
