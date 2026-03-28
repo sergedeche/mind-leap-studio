@@ -123,11 +123,12 @@ function TestimonialsCarousel() {
         <div className="flex gap-5">
           {testimonials.map((text, i) => (
             <div key={i} className="min-w-0 flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]">
-              <GlassCard className="flex h-full flex-col p-6 sm:p-7">
+              <GlassCard className="flex h-full flex-col items-center justify-center p-6 sm:p-7 text-center">
                 <span className="mb-4 text-4xl leading-none text-primary/40">"</span>
                 <p className="flex-1 text-[15px] leading-relaxed text-muted-foreground text-pretty">
                   {text}
                 </p>
+                <span className="mt-4 text-4xl leading-none text-primary/40">"</span>
               </GlassCard>
             </div>
           ))}
