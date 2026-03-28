@@ -136,7 +136,7 @@ function TestimonialsCarousel() {
       </div>
 
       {/* Navigation */}
-      <div className="mt-8 flex items-center justify-center gap-4">
+      <div className="mt-4 flex items-center justify-center gap-4">
         <button
           onClick={() => emblaApi?.scrollPrev()}
           className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card/60 text-muted-foreground backdrop-blur-sm transition-colors hover:bg-card hover:text-foreground"
