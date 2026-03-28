@@ -652,6 +652,7 @@ const Index = () => {
               <a href="https://corphacker.ru/polytic" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 transition-colors hover:text-foreground">Политика конфиденциальности</a>
               <a href="https://corphacker.ru/oferta" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 transition-colors hover:text-foreground">Оферта оказания услуг</a>
               <a href="https://nontsecrets.tilda.ws/personal" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 transition-colors hover:text-foreground">Обработка персональных данных</a>
+              <a href="https://t.me/+79384533173" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 transition-colors hover:text-foreground">Служба поддержки</a>
             </div>
             <p>© {new Date().getFullYear()} Все права защищены</p>
           </div>
