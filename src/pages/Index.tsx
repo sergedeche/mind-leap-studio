@@ -359,6 +359,11 @@ const Index = () => {
             </Animate>
           ))}
         </div>
+        <Animate delay={450}>
+          <p className="mt-10 text-center text-lg font-medium text-primary sm:text-xl">
+            Разбираем все инструменты, которые были использованы для создания этого мастер-класса
+          </p>
+        </Animate>
       </Section>
 
       {/* ── ДЛЯ КОГО ── */}
