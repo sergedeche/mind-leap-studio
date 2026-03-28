@@ -647,10 +647,11 @@ const Index = () => {
         <div className="mx-auto max-w-[1120px] px-5 sm:px-8 lg:px-10">
           <div className="h-px bg-gradient-to-r from-transparent via-border/50 to-transparent mb-10" />
           <div className="flex flex-col items-center gap-5 text-center text-xs text-muted-foreground">
-            <p>ИП Черненко Сергей&ensp;·&ensp;ИНН 366118088498&ensp;·&ensp;ОГРН 322366800055498</p>
-            <div className="flex gap-5">
-              <a href="https://sergeichernenko.ru/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 transition-colors hover:text-foreground">Политика конфиденциальности</a>
-              <a href="https://sergeichernenko.ru/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 transition-colors hover:text-foreground">Оферта</a>
+            <p>ИП Черненко Сергей Владимирович&ensp;·&ensp;ИНН 773610555595&ensp;·&ensp;ОГРН 318774600294952</p>
+            <div className="flex flex-wrap justify-center gap-5">
+              <a href="https://corphacker.ru/polytic" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 transition-colors hover:text-foreground">Политика конфиденциальности</a>
+              <a href="https://corphacker.ru/oferta" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 transition-colors hover:text-foreground">Оферта оказания услуг</a>
+              <a href="https://nontsecrets.tilda.ws/personal" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 transition-colors hover:text-foreground">Обработка персональных данных</a>
             </div>
             <p>© {new Date().getFullYear()} Все права защищены</p>
           </div>
