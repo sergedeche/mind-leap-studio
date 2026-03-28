@@ -551,7 +551,7 @@ const Index = () => {
             <div className="grid gap-8 sm:grid-cols-3">
               {[
                 { icon: MapPin, title: "Офлайн", desc: "Живое мероприятие с личным общением" },
-                { icon: Clock, title: "4 часа", desc: "Интенсивный формат без воды" },
+                { icon: Clock, title: "3 часа", desc: "Интенсивный формат без воды" },
                 { icon: MessageSquare, title: "Нетворкинг", desc: "Общение с единомышленниками и спикером" },
               ].map((item, i) => (
                 <Animate key={i} delay={i * 100}>
