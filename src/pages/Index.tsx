@@ -522,7 +522,7 @@ const Index = () => {
             Программа мастер-класса
           </h2>
           <p className="mx-auto mb-16 max-w-lg text-center text-base text-muted-foreground text-pretty">
-            6 модулей интенсивной работы за 4 часа
+            6 модулей интенсивной работы за 3 часа
           </p>
         </Animate>
         <div className="grid gap-4 sm:grid-cols-2">
