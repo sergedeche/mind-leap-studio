@@ -260,11 +260,7 @@ const Index = () => {
             </h1>
           </Animate>
 
-          <Animate delay={200}>
-            <p className="mx-auto mb-10 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg text-pretty">
-              Как использовать ИИ в работе, чтобы получить максимум результатов и&nbsp;опередить конкурентов
-            </p>
-          </Animate>
+
 
           <Animate delay={300}>
             <div className="flex flex-wrap items-center justify-center gap-4">
