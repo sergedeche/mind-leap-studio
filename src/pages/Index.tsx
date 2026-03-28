@@ -604,16 +604,13 @@ const Index = () => {
       {/* ── ОТЗЫВЫ ── */}
       <Section className="py-10 lg:py-14">
         <Animate>
-          <SectionBadge icon={MessageSquare} label="Отзывы" />
-          <h2 className="mb-4 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
+          <h2 className="mb-6 flex items-center justify-center gap-3 text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
+            <MessageSquare className="h-8 w-8 text-primary sm:h-10 sm:w-10 shrink-0" />
             Что говорят{" "}
             <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
               участники
             </span>
           </h2>
-          <p className="mx-auto mb-16 max-w-lg text-center text-base text-muted-foreground text-pretty">
-            Реальные отзывы участников мероприятий Сергея
-          </p>
         </Animate>
         <TestimonialsCarousel />
       </Section>
