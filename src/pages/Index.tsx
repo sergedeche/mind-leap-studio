@@ -136,7 +136,7 @@ function TestimonialsCarousel() {
       </div>
 
       {/* Navigation */}
-      <div className="mt-8 flex items-center justify-center gap-4">
+      <div className="mt-4 flex items-center justify-center gap-4">
         <button
           onClick={() => emblaApi?.scrollPrev()}
           className="flex h-10 w-10 items-center justify-center rounded-full border border-border bg-card/60 text-muted-foreground backdrop-blur-sm transition-colors hover:bg-card hover:text-foreground"
@@ -605,8 +605,8 @@ const Index = () => {
       {/* ── ОТЗЫВЫ ── */}
       <Section className="py-10 lg:py-14">
         <Animate>
-          <h2 className="mb-6 flex items-center justify-center gap-3 text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
-            <MessageSquare className="h-8 w-8 text-primary sm:h-10 sm:w-10 shrink-0" />
+          <h2 className="mb-6 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
+            <MessageSquare className="mr-2 inline-block h-7 w-7 text-primary sm:h-10 sm:w-10 align-middle" />
             Что говорят{" "}
             <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
               участники
