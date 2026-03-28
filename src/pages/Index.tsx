@@ -364,6 +364,20 @@ const Index = () => {
             Разбираем все инструменты, которые были использованы для создания этого мастер-класса
           </p>
         </Animate>
+        {/* Tools marquee */}
+        <div className="relative mt-12 overflow-hidden">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-background to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-background to-transparent" />
+          <div className="flex animate-marquee gap-14 whitespace-nowrap">
+            {[...Array(2)].map((_, setIdx) => (
+              <div key={setIdx} className="flex shrink-0 gap-14 items-center">
+                {["ChatGPT", "Perplexity", "NotebookLM", "Cursor AI", "N8N", "Higgsfield"].map((name) => (
+                  <span key={name} className="text-sm font-semibold tracking-wide text-foreground/80">{name}</span>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
       </Section>
 
       {/* ── ДЛЯ КОГО ── */}
