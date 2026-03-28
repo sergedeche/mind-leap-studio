@@ -214,6 +214,74 @@ function ScrollWord({
     </motion.span>
   );
 }
+/* ─── navbar ─── */
+function NavBar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const links = [
+    { href: "#learn", label: "Программа" },
+    { href: "#author", label: "Автор" },
+    { href: "#cta", label: "Стоимость" },
+  ];
+
+  return (
+    <nav className="fixed inset-x-0 top-0 z-50">
+      <div className="mx-auto flex h-[72px] max-w-[1120px] items-center justify-between px-5 sm:px-8 lg:px-10">
+        {/* Left: home icon */}
+        <a href="#" className="flex items-center justify-center rounded-full p-2 text-foreground/80 transition-colors hover:text-foreground">
+          <Home className="h-5 w-5" />
+        </a>
+
+        {/* Center: desktop links */}
+        <div className="hidden items-center gap-8 md:flex">
+          {links.map((l) => (
+            <a key={l.href} href={l.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+              {l.label}
+            </a>
+          ))}
+        </div>
+
+        {/* Right: CTA + mobile burger */}
+        <div className="flex items-center gap-3">
+          <a href="#cta" className="rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-all duration-200 hover:bg-primary/85 hover:shadow-[0_0_20px_-4px_hsl(var(--primary)/0.5)] active:scale-[0.97]">
+            Предзапись
+          </a>
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="flex items-center justify-center rounded-full p-2 text-foreground/80 transition-colors hover:text-foreground md:hidden"
+            aria-label="Меню"
+          >
+            {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="overflow-hidden bg-background/80 backdrop-blur-xl md:hidden"
+          >
+            <div className="flex flex-col gap-1 px-5 pb-4 pt-2">
+              {links.map((l) => (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="rounded-lg px-4 py-3 text-sm text-muted-foreground transition-colors hover:bg-card/50 hover:text-foreground"
+                >
+                  {l.label}
+                </a>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+  );
+}
 
 
 const Index = () => {
