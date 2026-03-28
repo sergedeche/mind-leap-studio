@@ -227,7 +227,7 @@ function NavBar() {
     <nav className="fixed inset-x-0 top-0 z-50">
       <div className="mx-auto flex h-[72px] max-w-[1120px] items-center justify-between px-5 sm:px-8 lg:px-10">
         {/* Left: home icon */}
-        <a href="#" className="flex items-center justify-center rounded-full p-2 text-foreground/80 transition-colors hover:text-foreground">
+        <a href="https://sergeichernenko.ru/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center rounded-full p-2 text-foreground/80 transition-colors hover:text-foreground">
           <Home className="h-5 w-5" />
         </a>
 
@@ -242,7 +242,7 @@ function NavBar() {
 
         {/* Right: CTA + mobile burger */}
         <div className="flex items-center gap-3">
-          <a href="#cta" className="rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-all duration-200 hover:bg-primary/85 hover:shadow-[0_0_20px_-4px_hsl(var(--primary)/0.5)] active:scale-[0.97]">
+          <a href="https://t.me/corphacker?direct" target="_blank" rel="noopener noreferrer" className="rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-all duration-200 hover:bg-primary/85 hover:shadow-[0_0_20px_-4px_hsl(var(--primary)/0.5)] active:scale-[0.97]">
             Предзапись
           </a>
           <button
@@ -320,7 +320,7 @@ const Index = () => {
 
           <Animate delay={300}>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <a href="#cta" className="group inline-flex items-center gap-2.5 rounded-full bg-primary px-8 py-3.5 text-base font-semibold text-primary-foreground shadow-[0_0_30px_-5px_hsl(var(--primary)/0.5)] transition-all duration-300 hover:shadow-[0_0_50px_-5px_hsl(var(--primary)/0.7)] active:scale-[0.97]">
+              <a href="https://t.me/corphacker?direct" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2.5 rounded-full bg-primary px-8 py-3.5 text-base font-semibold text-primary-foreground shadow-[0_0_30px_-5px_hsl(var(--primary)/0.5)] transition-all duration-300 hover:shadow-[0_0_50px_-5px_hsl(var(--primary)/0.7)] active:scale-[0.97]">
                 Предзапись
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </a>
@@ -557,7 +557,7 @@ const Index = () => {
                 <span className="inline-flex items-center gap-1.5 text-sm"><MapPin className="h-4 w-4" /> Офлайн</span>
               </div>
               <p className="mb-10 text-5xl font-extrabold tracking-tight text-foreground sm:text-6xl">14 900 ₽</p>
-              <a href="#" className="group inline-flex items-center gap-2.5 rounded-full bg-primary px-10 py-4 text-base font-semibold text-primary-foreground shadow-[0_0_40px_-5px_hsl(var(--primary)/0.5)] transition-all duration-300 hover:shadow-[0_0_60px_-5px_hsl(var(--primary)/0.7)] active:scale-[0.97]">
+              <a href="https://sergeichernenko.ru/" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2.5 rounded-full bg-primary px-10 py-4 text-base font-semibold text-primary-foreground shadow-[0_0_40px_-5px_hsl(var(--primary)/0.5)] transition-all duration-300 hover:shadow-[0_0_60px_-5px_hsl(var(--primary)/0.7)] active:scale-[0.97]">
                 Оставить предзапись
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </a>
@@ -617,8 +617,8 @@ const Index = () => {
           <div className="flex flex-col items-center gap-5 text-center text-xs text-muted-foreground">
             <p>ИП Черненко Сергей&ensp;·&ensp;ИНН 366118088498&ensp;·&ensp;ОГРН 322366800055498</p>
             <div className="flex gap-5">
-              <a href="#" className="underline underline-offset-2 transition-colors hover:text-foreground">Политика конфиденциальности</a>
-              <a href="#" className="underline underline-offset-2 transition-colors hover:text-foreground">Оферта</a>
+              <a href="https://sergeichernenko.ru/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 transition-colors hover:text-foreground">Политика конфиденциальности</a>
+              <a href="https://sergeichernenko.ru/" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 transition-colors hover:text-foreground">Оферта</a>
             </div>
             <p>© {new Date().getFullYear()} Все права защищены</p>
           </div>
