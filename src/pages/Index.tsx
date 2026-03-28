@@ -123,11 +123,12 @@ function TestimonialsCarousel() {
         <div className="flex gap-5">
           {testimonials.map((text, i) => (
             <div key={i} className="min-w-0 flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]">
-              <GlassCard className="flex h-full flex-col p-6 sm:p-7">
+              <GlassCard className="flex h-full flex-col items-center justify-center p-6 sm:p-7 text-center">
                 <span className="mb-4 text-4xl leading-none text-primary/40">"</span>
                 <p className="flex-1 text-[15px] leading-relaxed text-muted-foreground text-pretty">
                   {text}
                 </p>
+                <span className="mt-4 text-4xl leading-none text-primary/40">"</span>
               </GlassCard>
             </div>
           ))}
@@ -604,16 +605,13 @@ const Index = () => {
       {/* ── ОТЗЫВЫ ── */}
       <Section className="py-10 lg:py-14">
         <Animate>
-          <SectionBadge icon={MessageSquare} label="Отзывы" />
-          <h2 className="mb-4 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
+          <h2 className="mb-6 flex items-center justify-center gap-3 text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
+            <MessageSquare className="h-8 w-8 text-primary sm:h-10 sm:w-10 shrink-0" />
             Что говорят{" "}
             <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
               участники
             </span>
           </h2>
-          <p className="mx-auto mb-16 max-w-lg text-center text-base text-muted-foreground text-pretty">
-            Реальные отзывы участников мероприятий Сергея
-          </p>
         </Animate>
         <TestimonialsCarousel />
       </Section>
