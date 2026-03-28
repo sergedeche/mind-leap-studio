@@ -396,6 +396,25 @@ const Index = () => {
         </div>
       </Section>
 
+      {/* ── ВИДЕО ── */}
+      <Section className="py-10 lg:py-14">
+        <Animate>
+          <div className="mx-auto max-w-3xl">
+            <GlassCard className="overflow-hidden p-0" hover={false}>
+              <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+                <iframe
+                  src="https://rutube.ru/play/embed/7f6ebdd6843542215ffb22bfd3ab2f40/"
+                  className="absolute inset-0 h-full w-full"
+                  frameBorder="0"
+                  allow="clipboard-write; autoplay"
+                  allowFullScreen
+                />
+              </div>
+            </GlassCard>
+          </div>
+        </Animate>
+      </Section>
+
       {/* ── ДЛЯ КОГО ── */}
       <Section className="py-10 lg:py-14">
         <Animate>
