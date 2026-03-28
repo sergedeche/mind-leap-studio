@@ -578,8 +578,8 @@ const Index = () => {
       {/* ── АВТОР ── */}
       <Section id="author" className="py-10 lg:py-14">
         <Animate>
-          <SectionBadge icon={Sparkles} label="Автор и спикер" />
-          <h2 className="mb-14 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
+          <h2 className="mb-14 flex items-center justify-center gap-3 text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
+            <Award className="h-8 w-8 text-primary sm:h-10 sm:w-10 shrink-0" />
             Автор и спикер
           </h2>
         </Animate>
