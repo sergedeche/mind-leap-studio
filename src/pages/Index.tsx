@@ -338,13 +338,10 @@ const Index = () => {
       {/* ── ВЫ УЗНАЕТЕ ── */}
       <Section id="learn" className="py-20 lg:py-24">
         <Animate>
-          <SectionBadge icon={BookOpen} label="Вы узнаете" />
-          <h2 className="mb-4 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
+          <h2 className="mb-12 flex items-center justify-center gap-3 text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
+            <Lightbulb className="h-8 w-8 text-primary sm:h-10 sm:w-10 shrink-0" />
             На мастер-классе вы узнаете
           </h2>
-          <p className="mx-auto mb-16 max-w-lg text-center text-base text-muted-foreground text-pretty">
-            Практические знания, которые можно применить уже на следующий день
-          </p>
         </Animate>
         <div className="mx-auto max-w-2xl space-y-5">
           {[
