@@ -484,31 +484,26 @@ const Index = () => {
 
 
       {/* ── ЧЕМ ОТЛИЧАЕТСЯ ── */}
-      <Section className="py-10 lg:py-14">
+      <Section className="py-10 lg:py-14 bg-primary">
         <Animate>
-          <SectionBadge icon={Sparkles} label="Преимущества" />
-          <h2 className="mb-4 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
-            Чем отличается от других
+          <h2 className="mb-10 text-center text-3xl font-bold tracking-tight text-primary-foreground sm:text-5xl text-balance uppercase">
+            Чем отличается этот мастер-класс:
           </h2>
-          <p className="mx-auto mb-16 max-w-lg text-center text-base text-muted-foreground text-pretty">
-            Это не лекция по нейросетям — это стратегическая сессия для вашего бизнеса
-          </p>
         </Animate>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2">
           {[
-            { icon: Brain, text: "Стратегический подход, а не перечисление нейросетей" },
-            { icon: BarChart3, text: "Реальные кейсы из российского бизнеса" },
-            { icon: MessageSquare, text: "Живое общение и ответы на ваши вопросы" },
-            { icon: Layers, text: "Готовые шаблоны и чек-листы для внедрения" },
-            { icon: Rocket, text: "Практика прямо на мастер-классе — вы уйдёте с результатом" },
+            { num: "01", text: "Без воды — только опыт внедрения ИИ в реальный процесс" },
+            { num: "02", text: "Понимаю задачи и подход управленцев, мы говорим на одном языке" },
+            { num: "03", text: "Практические сценарии, адаптированные под задачи руководства" },
+            { num: "04", text: "Для тех, кто не обладает технической экспертизой" },
           ].map((item, i) => (
             <Animate key={i} delay={i * 80}>
-              <GlassCard className="flex items-start gap-4 p-6">
-                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary ring-1 ring-primary/20">
-                  <item.icon className="h-4.5 w-4.5" />
+              <div className="relative rounded-2xl bg-primary-foreground p-6 sm:p-8 overflow-hidden min-h-[180px] flex flex-col justify-between">
+                <p className="text-lg sm:text-xl font-semibold leading-snug text-foreground max-w-[80%]">{item.text}</p>
+                <span className="absolute bottom-2 right-3 text-7xl sm:text-8xl font-black text-primary/20 leading-none select-none">
+                  {item.num}
                 </span>
-                <p className="text-[15px] leading-relaxed text-secondary-foreground text-pretty">{item.text}</p>
-              </GlassCard>
+              </div>
             </Animate>
           ))}
         </div>
