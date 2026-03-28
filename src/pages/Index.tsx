@@ -565,6 +565,7 @@ const Index = () => {
                 </Animate>
               ))}
             </div>
+            </div>
           </GlassCard>
         </Animate>
       </Section>
