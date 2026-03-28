@@ -221,20 +221,7 @@ const Index = () => {
     <div className="min-h-screen overflow-x-hidden bg-background text-foreground">
 
       {/* ── NAV ── */}
-      <nav className="fixed inset-x-0 top-0 z-50 bg-background/60 backdrop-blur-xl">
-        <div className="mx-auto flex h-[72px] max-w-[1120px] items-center justify-between px-5 sm:px-8 lg:px-10">
-          <span className="text-lg font-bold tracking-tight text-foreground">AI Masterclass</span>
-          <div className="hidden items-center gap-8 sm:flex">
-            <a href="#learn" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Программа</a>
-            <a href="#author" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Автор</a>
-            <a href="#cta" className="text-sm text-muted-foreground transition-colors hover:text-foreground">Стоимость</a>
-          </div>
-          <a href="#cta" className="rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-all duration-200 hover:bg-primary/85 hover:shadow-[0_0_20px_-4px_hsl(var(--primary)/0.5)] active:scale-[0.97]">
-            Предзапись
-          </a>
-        </div>
-        <div className="h-px bg-gradient-to-r from-transparent via-border/50 to-transparent" />
-      </nav>
+      <NavBar />
 
       {/* ── HERO ── */}
       <header className="relative flex min-h-screen items-center justify-center pt-[72px]">
