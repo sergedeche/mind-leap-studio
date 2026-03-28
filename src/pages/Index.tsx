@@ -364,6 +364,30 @@ const Index = () => {
             Разбираем все инструменты, которые были использованы для создания этого мастер-класса
           </p>
         </Animate>
+        {/* Tools marquee */}
+        <div className="relative mt-12 overflow-hidden py-4">
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-background to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-background to-transparent" />
+          <div className="flex animate-marquee">
+            {[...Array(2)].map((_, setIdx) => (
+              <div key={setIdx} className="flex shrink-0 items-center gap-16 pr-16">
+                {[
+                  { name: "ChatGPT", icon: <svg viewBox="0 0 24 24" className="h-8 w-8" fill="currentColor"><path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073zM13.26 22.43a4.476 4.476 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 0 0 .392-.681v-6.737l2.02 1.168a.071.071 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494zM3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085 4.783 2.759a.771.771 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646zM2.34 7.896a4.485 4.485 0 0 1 2.366-1.973V11.6a.766.766 0 0 0 .388.676l5.815 3.355-2.02 1.168a.076.076 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 7.872zm16.597 3.855l-5.833-3.387L15.119 7.2a.076.076 0 0 1 .071 0l4.83 2.791a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.407-.667zm2.01-3.023l-.141-.085-4.774-2.782a.776.776 0 0 0-.785 0L9.409 9.23V6.897a.066.066 0 0 1 .028-.061l4.83-2.787a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135l-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08L8.704 5.46a.795.795 0 0 0-.393.681zm1.097-2.365l2.602-1.5 2.607 1.5v2.999l-2.597 1.5-2.607-1.5z"/></svg> },
+                  { name: "Perplexity", icon: <svg viewBox="0 0 24 24" className="h-8 w-8" fill="currentColor"><path d="M12 1L4 5v6.5L1 13v5l3 2 4-2.5V22l4 1 4-1v-4.5L20 20l3-2v-5l-3-1.5V5l-8-4zm0 2.2L18 7v4.3l-6-3-6 3V7l6-3.8zM5 13.3l2 1v3.2l-2 1.3V13.3zm14 0v5.5l-2-1.3v-3.2l2-1zm-7-1.1l5 2.5v4l-5 2.5-5-2.5v-4l5-2.5z"/></svg> },
+                  { name: "NotebookLM", icon: <svg viewBox="0 0 24 24" className="h-8 w-8" fill="currentColor"><path d="M4 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H4zm1 3h14v1H5V6zm0 3h10v1H5V9zm0 3h12v1H5v-1zm0 3h8v1H5v-1z"/></svg> },
+                  { name: "Cursor AI", icon: <svg viewBox="0 0 24 24" className="h-8 w-8" fill="currentColor"><path d="M5 3l14 9-14 9V3z"/></svg> },
+                  { name: "N8N", icon: <svg viewBox="0 0 24 24" className="h-8 w-8" fill="currentColor"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.5 12h4M14.5 7l-2 4M14.5 17l-2-4" stroke="currentColor" strokeWidth="1.5" fill="none"/></svg> },
+                  { name: "Higgsfield", icon: <svg viewBox="0 0 24 24" className="h-8 w-8" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14V8l7 4-7 4z"/></svg> },
+                ].map((tool) => (
+                  <div key={tool.name} className="flex flex-col items-center gap-2 text-foreground/80">
+                    {tool.icon}
+                    <span className="text-[11px] font-medium tracking-wider text-muted-foreground uppercase">{tool.name}</span>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
       </Section>
 
       {/* ── ДЛЯ КОГО ── */}
