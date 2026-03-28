@@ -293,7 +293,7 @@ const Index = () => {
       <NavBar />
 
       {/* ── HERO ── */}
-      <header className="relative flex min-h-[70vh] items-center justify-center pt-[72px]">
+      <header className="relative flex min-h-[100svh] items-center justify-center pt-[72px]">
         <img src={heroBg} alt="" className="absolute inset-0 h-full w-full object-cover" loading="eager" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/75 to-background" />
         
