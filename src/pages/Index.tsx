@@ -1,10 +1,11 @@
 import { useEffect, useRef, useCallback, useState, useMemo } from "react";
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { motion, useInView, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import {
   Cpu, Zap, Clock, Users, Target, Briefcase, Building2,
   TrendingUp, Award, Shield, Lightbulb, BookOpen, Wrench,
   MessageSquare, BarChart3, Brain, Layers, Rocket, CheckCircle2,
-  MapPin, Calendar, ArrowRight, Sparkles, Play, BadgeCheck, ChevronLeft, ChevronRight
+  MapPin, Calendar, ArrowRight, Sparkles, Play, BadgeCheck, ChevronLeft, ChevronRight,
+  Home, Menu, X
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpeg";
 import audience1 from "@/assets/audience-1.jpeg";
