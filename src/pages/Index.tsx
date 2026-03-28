@@ -336,7 +336,7 @@ const Index = () => {
       <ScrollRevealText text="Как использовать ИИ в работе, чтобы получить максимум результатов и опередить конкурентов" />
 
       {/* ── ВЫ УЗНАЕТЕ ── */}
-      <Section id="learn" className="py-20 lg:py-24">
+      <Section id="learn" className="py-10 lg:py-14">
         <Animate>
           <h2 className="mb-12 flex items-center justify-center gap-3 text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
             <Lightbulb className="h-8 w-8 text-primary sm:h-10 sm:w-10 shrink-0" />
@@ -396,7 +396,7 @@ const Index = () => {
       </Section>
 
       {/* ── ДЛЯ КОГО ── */}
-      <Section className="py-24 lg:py-32">
+      <Section className="py-10 lg:py-14">
         <Animate>
           <SectionBadge icon={Users} label="Для кого" />
           <h2 className="mb-4 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
@@ -432,7 +432,7 @@ const Index = () => {
       </Section>
 
       {/* ── РЕЗУЛЬТАТЫ ── */}
-      <Section className="py-24 lg:py-32">
+      <Section className="py-10 lg:py-14">
         <Animate>
           <SectionBadge icon={Award} label="Результаты" />
           <h2 className="mb-4 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
@@ -463,7 +463,7 @@ const Index = () => {
 
 
       {/* ── ЧЕМ ОТЛИЧАЕТСЯ ── */}
-      <Section className="py-24 lg:py-32">
+      <Section className="py-10 lg:py-14">
         <Animate>
           <SectionBadge icon={Sparkles} label="Преимущества" />
           <h2 className="mb-4 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
@@ -494,7 +494,7 @@ const Index = () => {
       </Section>
 
       {/* ── ПРОГРАММА ── */}
-      <Section className="py-24 lg:py-32">
+      <Section className="py-10 lg:py-14">
         <Animate>
           <SectionBadge icon={BookOpen} label="Программа" />
           <h2 className="mb-4 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
@@ -515,7 +515,7 @@ const Index = () => {
       </Section>
 
       {/* ── ФОРМАТ ── */}
-      <Section className="py-24 lg:py-32">
+      <Section className="py-10 lg:py-14">
         <Animate>
           <GlassCard hover={false} className="p-10 sm:p-14">
             <SectionBadge icon={MapPin} label="Формат" />
@@ -544,7 +544,7 @@ const Index = () => {
       </Section>
 
       {/* ── CTA ── */}
-      <Section id="cta" className="py-24 lg:py-32">
+      <Section id="cta" className="py-10 lg:py-14">
         <Animate>
           <div className="relative overflow-hidden rounded-3xl border border-primary/20 p-10 text-center sm:p-16 lg:p-20">
             {/* Background effects */}
@@ -575,7 +575,7 @@ const Index = () => {
       </Section>
 
       {/* ── АВТОР ── */}
-      <Section id="author" className="py-24 lg:py-32">
+      <Section id="author" className="py-10 lg:py-14">
         <Animate>
           <SectionBadge icon={Sparkles} label="Автор и спикер" />
           <h2 className="mb-14 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
@@ -602,7 +602,7 @@ const Index = () => {
       </Section>
 
       {/* ── ОТЗЫВЫ ── */}
-      <Section className="py-24 lg:py-32">
+      <Section className="py-10 lg:py-14">
         <Animate>
           <SectionBadge icon={MessageSquare} label="Отзывы" />
           <h2 className="mb-4 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
