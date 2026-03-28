@@ -293,7 +293,7 @@ const Index = () => {
       <NavBar />
 
       {/* ── HERO ── */}
-      <header className="relative flex min-h-[100svh] items-center justify-center pt-[72px]">
+      <header className="relative flex min-h-[70vh] items-center justify-center pt-[72px]">
         <img src={heroBg} alt="" className="absolute inset-0 h-full w-full object-cover" loading="eager" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/75 to-background" />
         
@@ -309,7 +309,7 @@ const Index = () => {
           </Animate>
 
           <Animate delay={100}>
-            <h1 className="mx-auto mb-10 max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl text-balance">
+            <h1 className="mx-auto mb-6 max-w-4xl text-4xl font-extrabold leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl text-balance">
               Код стратегического{" "}
               <span className="bg-gradient-to-r from-primary via-primary to-primary/60 bg-clip-text text-transparent">
                 превосходства
