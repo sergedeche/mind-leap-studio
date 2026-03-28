@@ -537,7 +537,12 @@ const Index = () => {
       {/* ── ФОРМАТ ── */}
       <Section className="py-10 lg:py-14">
         <Animate>
-          <GlassCard hover={false} className="p-10 sm:p-14">
+          <GlassCard hover={false} className="relative p-10 sm:p-14 overflow-hidden">
+            <div className="absolute inset-0">
+              <img src={formatBg} alt="" className="h-full w-full object-cover" />
+              <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+            </div>
+            <div className="relative z-10">
             <SectionBadge icon={MapPin} label="Формат" />
             <h2 className="mb-12 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
               Формат проведения
