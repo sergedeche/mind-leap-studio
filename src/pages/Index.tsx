@@ -292,14 +292,14 @@ const Index = () => {
       <NavBar />
 
       {/* ── HERO ── */}
-      <header className="relative flex min-h-screen items-center justify-center pt-[72px]">
+      <header className="relative flex min-h-[70vh] items-center justify-center pt-[72px]">
         <img src={heroBg} alt="" className="absolute inset-0 h-full w-full object-cover" loading="eager" />
         <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/75 to-background" />
         
         {/* Glow orb */}
         <div className="absolute top-1/3 left-1/2 h-[400px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/15 blur-[150px] animate-glow-pulse" />
         
-        <Section className="relative z-10 py-24 sm:py-32 text-center">
+        <Section className="relative z-10 py-12 sm:py-16 text-center">
           <Animate>
             <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-xs font-medium tracking-wide text-muted-foreground backdrop-blur-sm">
               <Sparkles className="h-3.5 w-3.5 text-primary" />
