@@ -522,7 +522,7 @@ const Index = () => {
             Программа мастер-класса
           </h2>
           <p className="mx-auto mb-16 max-w-lg text-center text-base text-muted-foreground text-pretty">
-            6 модулей интенсивной работы за 4 часа
+            6 модулей интенсивной работы за 3 часа
           </p>
         </Animate>
         <div className="grid gap-4 sm:grid-cols-2">
@@ -551,7 +551,7 @@ const Index = () => {
             <div className="grid gap-8 sm:grid-cols-3">
               {[
                 { icon: MapPin, title: "Офлайн", desc: "Живое мероприятие с личным общением" },
-                { icon: Clock, title: "4 часа", desc: "Интенсивный формат без воды" },
+                { icon: Clock, title: "3 часа", desc: "Интенсивный формат без воды" },
                 { icon: MessageSquare, title: "Нетворкинг", desc: "Общение с единомышленниками и спикером" },
               ].map((item, i) => (
                 <Animate key={i} delay={i * 100}>
