@@ -453,35 +453,6 @@ const Index = () => {
         </div>
       </Section>
 
-      {/* ── РЕЗУЛЬТАТЫ ── */}
-      <Section className="py-10 lg:py-14">
-        <Animate>
-          <h2 className="mb-8 flex items-center justify-center gap-3 text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
-            <Award className="h-8 w-8 text-primary sm:h-10 sm:w-10 shrink-0" />
-            После мастер-класса вы
-          </h2>
-        </Animate>
-        <div className="grid gap-4">
-          {[
-            { text: <><strong>Перейдете на новый уровень эффективности</strong>, используя технологии для кратного усиления личной экспертизы и получения стратегического преимущества.</> },
-            { text: <><strong>Поймете фундаментальные принципы работы ИИ</strong>, чтобы использовать его как надежный инструмент для решения бизнес-задач любого уровня сложности.</> },
-            { text: <><strong>Внедрите ИИ как личного стратегического советника</strong> для объективного анализа идей, поиска рисков и генерации нестандартных решений.</> },
-            { text: <><strong>Научитесь выявлять потенциал для автоматизации</strong>, делегируя нейросетям рутинные процессы, не приносящие прямой ценности вашему бизнесу.</> },
-            { text: <><strong>Сможете эффективно мотивировать команду</strong>, превращая ИИ в инструмент усиления компетенций каждого сотрудника и повышения общей продуктивности.</> },
-            { text: <><strong>Начнете выстраивать гибридную модель управления</strong>, делегируя часть функций автономным цифровым агентам и корпоративным базам знаний.</> },
-          ].map((item, i) => (
-            <Animate key={i} delay={i * 80}>
-              <GlassCard className="flex items-start gap-4 p-6">
-                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                  <CheckCircle2 className="h-4 w-4" />
-                </span>
-                <p className="text-[15px] leading-relaxed text-secondary-foreground text-pretty">{item.text}</p>
-              </GlassCard>
-            </Animate>
-          ))}
-        </div>
-      </Section>
-
 
       {/* ── ЧЕМ ОТЛИЧАЕТСЯ ── */}
       <Section className="py-10 lg:py-14">
