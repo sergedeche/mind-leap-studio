@@ -530,6 +530,7 @@ const Index = () => {
               <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
             </div>
             <div className="relative z-10">
+            <h2 className="mb-8 text-center text-2xl sm:text-3xl font-bold tracking-tight text-foreground">Формат</h2>
             <div className="grid grid-cols-3 gap-4">
               {[
                 { icon: MapPin, title: "Офлайн", desc: "Живое мероприятие с личным общением" },
