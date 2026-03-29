@@ -617,7 +617,7 @@ const Index = () => {
           <GlassCard hover={false} className="mx-auto max-w-2xl overflow-hidden p-0">
             <div className="flex flex-col sm:flex-row">
               <div className="sm:w-2/5">
-                <img src={speakerImg} alt="Сергей Черненко" className="h-64 w-full object-cover object-top sm:h-full" />
+                <img src={speakerImg} alt="Сергей Черненко" className="w-full object-cover object-top sm:h-full" />
               </div>
               <div className="flex flex-col justify-center p-6 sm:w-3/5 sm:p-8">
                 <h3 className="mb-1.5 text-2xl font-bold text-foreground">Сергей Черненко</h3>
