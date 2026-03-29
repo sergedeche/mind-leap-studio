@@ -355,6 +355,8 @@ const Index = () => {
       {/* ── SCROLL REVEAL TEXT ── */}
       <ScrollRevealText text="Как использовать ИИ в работе, чтобы получить максимум результатов и опередить конкурентов" />
 
+      <PurpleDivider />
+
       {/* ── ВЫ УЗНАЕТЕ ── */}
       <Section id="learn" className="py-10 lg:py-14">
         <Animate>
