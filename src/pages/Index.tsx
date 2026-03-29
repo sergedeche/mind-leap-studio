@@ -219,7 +219,7 @@ function ScrollWord({
 /* ─── decorative divider ─── */
 function PurpleDivider() {
   return (
-    <div className="flex items-center justify-center gap-3 py-4">
+    <div className="flex items-center justify-center gap-3 py-8">
       <span className="h-px w-12 bg-gradient-to-r from-transparent to-primary/40" />
       <span className="h-1.5 w-1.5 rounded-full bg-primary/60 animate-pulse" />
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-primary/50">
@@ -351,6 +351,8 @@ const Index = () => {
           </Animate>
         </Section>
       </header>
+
+      <PurpleDivider />
 
       {/* ── SCROLL REVEAL TEXT ── */}
       <ScrollRevealText text="Как использовать ИИ в работе, чтобы получить максимум результатов и опередить конкурентов" />
