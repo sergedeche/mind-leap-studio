@@ -453,32 +453,6 @@ const Index = () => {
         </div>
       </Section>
 
-
-      {/* ── ЧЕМ ОТЛИЧАЕТСЯ ── */}
-      <Section className="py-10 lg:py-14">
-        <Animate>
-          <SectionBadge icon={Sparkles} label="Преимущества" />
-          <h2 className="mb-12 text-center text-3xl font-bold uppercase tracking-tight text-foreground sm:text-5xl text-balance">
-            Чем отличается этот мастер-класс:
-          </h2>
-        </Animate>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {[
-            { num: "01", text: "Без воды — только опыт внедрения ИИ в реальный процесс" },
-            { num: "02", text: "Понимаю задачи и подход управленцев, мы говорим на одном языке" },
-            { num: "03", text: "Практические сценарии, адаптированные под задачи руководства" },
-            { num: "04", text: "Для тех, кто не обладает технической экспертизой" },
-          ].map((item, i) => (
-            <Animate key={i} delay={i * 80}>
-              <GlassCard className="relative flex flex-col justify-between p-6 min-h-[160px] overflow-hidden">
-                <p className="text-lg font-semibold leading-snug text-secondary-foreground text-pretty pr-8">{item.text}</p>
-                <span className="absolute bottom-2 right-4 text-6xl font-black text-primary/20 leading-none select-none">{item.num}</span>
-              </GlassCard>
-            </Animate>
-          ))}
-        </div>
-      </Section>
-
       {/* ── ПРОГРАММА ── */}
       <Section id="program" className="py-10 lg:py-14">
         <Animate>
