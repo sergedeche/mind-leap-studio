@@ -360,7 +360,7 @@ const Index = () => {
       <PurpleDivider />
 
       {/* ── ВЫ УЗНАЕТЕ ── */}
-      <Section id="learn" className="py-10 lg:py-14">
+      <Section id="learn" className="py-6 lg:py-8">
         <Animate>
           <h2 className="mb-12 flex items-center justify-center gap-3 text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
             <Lightbulb className="h-8 w-8 text-primary sm:h-10 sm:w-10 shrink-0" />
@@ -420,7 +420,7 @@ const Index = () => {
       </Section>
 
       {/* ── ВИДЕО ── */}
-      <Section className="py-10 lg:py-14">
+      <Section className="py-6 lg:py-8">
         <Animate>
           <div className="mx-auto max-w-3xl">
             <GlassCard className="overflow-hidden p-0" hover={false}>
@@ -439,7 +439,7 @@ const Index = () => {
       </Section>
 
       {/* ── ДЛЯ КОГО ── */}
-      <Section id="audience" className="py-10 lg:py-14">
+      <Section id="audience" className="py-6 lg:py-8">
         <Animate>
           <h2 className="mb-8 flex items-center justify-center gap-3 text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
             <Users className="h-8 w-8 text-primary sm:h-10 sm:w-10 shrink-0" />
@@ -472,7 +472,7 @@ const Index = () => {
       </Section>
 
       {/* ── ПРОГРАММА ── */}
-      <Section id="program" className="py-10 lg:py-14">
+      <Section id="program" className="py-6 lg:py-8">
         <Animate>
           <h2 className="mb-8 flex items-center justify-center gap-3 text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
             <BookOpen className="h-8 w-8 text-primary sm:h-10 sm:w-10 shrink-0" />
@@ -540,7 +540,7 @@ const Index = () => {
       </Section>
 
       {/* ── ФОРМАТ ── */}
-      <Section id="format" className="py-10 lg:py-14">
+      <Section id="format" className="py-6 lg:py-8">
         <Animate>
           <GlassCard hover={false} className="relative p-10 sm:p-14 overflow-hidden">
             <div className="absolute inset-0">
@@ -572,7 +572,7 @@ const Index = () => {
       </Section>
 
       {/* ── CTA ── */}
-      <Section id="cta" className="py-10 lg:py-14">
+      <Section id="cta" className="py-6 lg:py-8">
         <Animate>
           <div className="relative overflow-hidden rounded-3xl border border-primary/20 p-10 text-center sm:p-16 lg:p-20">
             {/* Background effects */}
@@ -606,7 +606,7 @@ const Index = () => {
       </Section>
 
       {/* ── АВТОР ── */}
-      <Section id="author" className="py-10 lg:py-14">
+      <Section id="author" className="py-6 lg:py-8">
         <Animate>
           <h2 className="mb-14 flex items-center justify-center gap-3 text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
             <Award className="h-8 w-8 text-primary sm:h-10 sm:w-10 shrink-0" />
@@ -633,7 +633,7 @@ const Index = () => {
       </Section>
 
       {/* ── ОТЗЫВЫ ── */}
-      <Section id="reviews" className="py-10 lg:py-14">
+      <Section id="reviews" className="py-6 lg:py-8">
         <Animate>
           <h2 className="mb-6 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
             <MessageSquare className="mr-2 inline-block h-7 w-7 text-primary sm:h-10 sm:w-10 align-middle" />
