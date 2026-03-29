@@ -352,6 +352,8 @@ const Index = () => {
         </Section>
       </header>
 
+      <PurpleDivider />
+
       {/* ── SCROLL REVEAL TEXT ── */}
       <ScrollRevealText text="Как использовать ИИ в работе, чтобы получить максимум результатов и опередить конкурентов" />
 
