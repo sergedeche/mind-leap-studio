@@ -220,9 +220,13 @@ function ScrollWord({
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const links = [
-    { href: "#learn", label: "Программа" },
-    { href: "#author", label: "Автор" },
+    { href: "#learn", label: "Вы узнаете" },
+    { href: "#audience", label: "Для кого" },
+    { href: "#program", label: "Программа" },
+    { href: "#format", label: "Формат" },
     { href: "#cta", label: "Стоимость" },
+    { href: "#author", label: "Об авторе" },
+    { href: "#reviews", label: "Отзывы" },
   ];
 
   return (
