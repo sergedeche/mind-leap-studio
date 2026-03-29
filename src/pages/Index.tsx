@@ -534,7 +534,7 @@ const Index = () => {
       </Section>
 
       {/* ── ФОРМАТ ── */}
-      <Section className="py-10 lg:py-14">
+      <Section id="format" className="py-10 lg:py-14">
         <Animate>
           <GlassCard hover={false} className="relative p-10 sm:p-14 overflow-hidden">
             <div className="absolute inset-0">
