@@ -171,7 +171,7 @@ function ScrollRevealText({ text }: { text: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 0.9", "start 0.15"],
+    offset: ["start 0.7", "start 0.15"],
   });
 
   const words = useMemo(() => text.split(" "), [text]);
