@@ -575,9 +575,12 @@ const Index = () => {
               </div>
               <p className="mb-10 text-5xl font-extrabold tracking-tight text-foreground sm:text-6xl">14 900 ₽</p>
               <a href="https://t.me/corphacker?direct" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2.5 rounded-full bg-primary px-10 py-4 text-base font-semibold text-primary-foreground shadow-[0_0_40px_-5px_hsl(var(--primary)/0.5)] transition-all duration-300 hover:shadow-[0_0_60px_-5px_hsl(var(--primary)/0.7)] active:scale-[0.97]">
-                Оставить предзапись
+                Оставить заявку
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </a>
+              <p className="mt-8 text-sm text-muted-foreground text-pretty max-w-md mx-auto">
+                Возможно проведение корпоративного мероприятия. Для уточнения деталей обращайтесь по ссылке выше.
+              </p>
             </div>
           </div>
         </Animate>
