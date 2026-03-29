@@ -220,9 +220,13 @@ function ScrollWord({
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const links = [
-    { href: "#learn", label: "Программа" },
-    { href: "#author", label: "Автор" },
+    { href: "#learn", label: "Вы узнаете" },
+    { href: "#audience", label: "Для кого" },
+    { href: "#program", label: "Программа" },
+    { href: "#format", label: "Формат" },
     { href: "#cta", label: "Стоимость" },
+    { href: "#author", label: "Об авторе" },
+    { href: "#reviews", label: "Отзывы" },
   ];
 
   return (
@@ -417,7 +421,7 @@ const Index = () => {
       </Section>
 
       {/* ── ДЛЯ КОГО ── */}
-      <Section className="py-10 lg:py-14">
+      <Section id="audience" className="py-10 lg:py-14">
         <Animate>
           <SectionBadge icon={Users} label="Для кого" />
           <h2 className="mb-4 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
@@ -509,7 +513,7 @@ const Index = () => {
       </Section>
 
       {/* ── ПРОГРАММА ── */}
-      <Section className="py-10 lg:py-14">
+      <Section id="program" className="py-10 lg:py-14">
         <Animate>
           <SectionBadge icon={BookOpen} label="Программа" />
           <h2 className="mb-4 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
@@ -530,7 +534,7 @@ const Index = () => {
       </Section>
 
       {/* ── ФОРМАТ ── */}
-      <Section className="py-10 lg:py-14">
+      <Section id="format" className="py-10 lg:py-14">
         <Animate>
           <GlassCard hover={false} className="relative p-10 sm:p-14 overflow-hidden">
             <div className="absolute inset-0">
@@ -623,7 +627,7 @@ const Index = () => {
       </Section>
 
       {/* ── ОТЗЫВЫ ── */}
-      <Section className="py-10 lg:py-14">
+      <Section id="reviews" className="py-10 lg:py-14">
         <Animate>
           <h2 className="mb-6 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
             <MessageSquare className="mr-2 inline-block h-7 w-7 text-primary sm:h-10 sm:w-10 align-middle" />
