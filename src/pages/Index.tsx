@@ -513,7 +513,7 @@ const Index = () => {
       </Section>
 
       {/* ── ПРОГРАММА ── */}
-      <Section className="py-10 lg:py-14">
+      <Section id="program" className="py-10 lg:py-14">
         <Animate>
           <SectionBadge icon={BookOpen} label="Программа" />
           <h2 className="mb-4 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
