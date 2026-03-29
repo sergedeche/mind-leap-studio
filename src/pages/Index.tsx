@@ -121,7 +121,7 @@ function TestimonialsCarousel() {
   return (
     <div className="relative">
       <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex items-start gap-5">
+        <div className="flex gap-5">
           {testimonials.map((text, i) => (
             <div key={i} className="min-w-0 flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.333%]">
               <GlassCard className="flex flex-col items-center p-6 sm:p-7 text-center">
