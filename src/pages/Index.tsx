@@ -625,6 +625,7 @@ const Index = () => {
                   <li className="flex gap-2.5"><BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span>Эксперт с 20+ летним опытом в международных компаниях, Совет директоров</span></li>
                   <li className="flex gap-2.5"><BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span>Основатель агентства по автоматизации бизнеса через ИИ</span></li>
                   <li className="flex gap-2.5"><BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span>Автор курсов по нетворкингу, карьерному росту, публичным выступлениям и ИИ</span></li>
+                  <li className="flex gap-2.5"><BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span>Автор книги про карьеру «Я умер в понедельник»</span></li>
                 </ul>
               </div>
             </div>
