@@ -627,7 +627,7 @@ const Index = () => {
                   <li className="flex gap-2.5"><BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span>Автор курсов по нетворкингу, карьерному росту, публичным выступлениям и ИИ</span></li>
                   <li className="flex gap-2.5"><BadgeCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><span>Автор книги про карьеру «Я умер в понедельник»</span></li>
                 </ul>
-                <a href="https://sergeichernenko.ru/" target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-5 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/20">
+                <a href="https://sergeichernenko.ru/" target="_blank" rel="noopener noreferrer" className="mt-5 self-start inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-5 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary/20">
                   Узнать больше <ArrowRight className="h-3.5 w-3.5" />
                 </a>
               </div>
