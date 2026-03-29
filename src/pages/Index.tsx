@@ -530,23 +530,19 @@ const Index = () => {
               <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
             </div>
             <div className="relative z-10">
-            <SectionBadge icon={MapPin} label="Формат" />
-            <h2 className="mb-12 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
-              Формат проведения
-            </h2>
-            <div className="grid gap-8 sm:grid-cols-3">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-6 md:gap-10">
               {[
                 { icon: MapPin, title: "Офлайн", desc: "Живое мероприятие с личным общением" },
                 { icon: Clock, title: "3 часа", desc: "Интенсивный формат без воды" },
                 { icon: MessageSquare, title: "Нетворкинг", desc: "Общение с единомышленниками и спикером" },
               ].map((item, i) => (
                 <Animate key={i} delay={i * 100}>
-                  <div className="text-center">
+                  <div className="text-center min-w-0 flex-1">
                     <span className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10 text-primary ring-1 ring-primary/20">
                       <item.icon className="h-6 w-6" />
                     </span>
-                    <h3 className="mb-1.5 text-lg font-semibold text-foreground">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground text-pretty">{item.desc}</p>
+                    <h3 className="mb-1.5 text-lg font-semibold text-foreground whitespace-nowrap">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground text-pretty max-w-[200px] mx-auto">{item.desc}</p>
                   </div>
                 </Animate>
               ))}
