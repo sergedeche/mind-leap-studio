@@ -423,13 +423,10 @@ const Index = () => {
       {/* ── ДЛЯ КОГО ── */}
       <Section id="audience" className="py-10 lg:py-14">
         <Animate>
-          <SectionBadge icon={Users} label="Для кого" />
-          <h2 className="mb-4 text-center text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
+          <h2 className="mb-8 flex items-center justify-center gap-3 text-3xl font-bold tracking-tight text-foreground sm:text-5xl text-balance">
+            <Users className="h-8 w-8 text-primary sm:h-10 sm:w-10 shrink-0" />
             Для кого этот мастер-класс
           </h2>
-          <p className="mx-auto mb-16 max-w-lg text-center text-base text-muted-foreground text-pretty">
-            Программа разработана для людей, которые принимают стратегические решения
-          </p>
         </Animate>
         <div className="grid gap-5 sm:grid-cols-2">
           {[
