@@ -230,7 +230,7 @@ function NavBar() {
   ];
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50">
+    <nav className="absolute inset-x-0 top-0 z-50">
       <div className="mx-auto flex h-[72px] max-w-[1120px] items-center justify-between px-5 sm:px-8 lg:px-10">
         {/* Left: home icon */}
         <a href="https://sergeichernenko.ru/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center rounded-full p-2 text-foreground/80 transition-colors hover:text-foreground">
