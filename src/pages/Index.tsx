@@ -553,7 +553,7 @@ const Index = () => {
               {[
                 { icon: MapPin, title: "Офлайн", desc: "Живое мероприятие с личным общением" },
                 { icon: Clock, title: "3 часа", desc: "Интенсивный формат без воды" },
-                { icon: MessageSquare, title: "Нетворкинг", desc: "Общение с единомышленниками и спикером" },
+                { icon: MessageSquare, title: "Нетворкинг", desc: "Общение с другими участниками и спикером" },
               ].map((item, i) => (
                 <Animate key={i} delay={i * 100}>
                   <div className="text-center">
