@@ -655,6 +655,12 @@ const Index = () => {
         <div className="mx-auto max-w-[1120px] px-5 sm:px-8 lg:px-10">
           <div className="h-px bg-gradient-to-r from-transparent via-border/50 to-transparent mb-10" />
           <div className="flex flex-col items-center gap-5 text-center text-xs text-muted-foreground">
+            <Animate>
+              <span className="mb-2 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-5 py-2.5 text-sm font-semibold text-primary shadow-[0_0_20px_-4px_hsl(var(--primary)/0.4)] animate-pulse">
+                <Sparkles className="h-4 w-4" />
+                Сайт сделан на 100% с помощью ИИ
+              </span>
+            </Animate>
             <p>ИП Черненко Сергей Владимирович&ensp;·&ensp;ИНН 773610555595&ensp;·&ensp;ОГРН 318774600294952</p>
             <div className="flex flex-wrap justify-center gap-5">
               <a href="https://corphacker.ru/polytic" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 transition-colors hover:text-foreground">Политика конфиденциальности</a>
@@ -663,10 +669,6 @@ const Index = () => {
               <a href="https://t.me/+79384533173" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 transition-colors hover:text-foreground">Служба поддержки</a>
             </div>
             <p>© {new Date().getFullYear()} Все права защищены</p>
-            <p className="mt-2 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-5 py-2 text-sm font-semibold text-primary">
-              <Sparkles className="h-4 w-4" />
-              Сайт сделан на 100% с помощью ИИ
-            </p>
           </div>
         </div>
       </footer>
