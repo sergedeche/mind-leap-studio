@@ -561,7 +561,7 @@ const Index = () => {
                       <item.icon className="h-5 w-5 sm:h-6 sm:w-6" />
                     </span>
                     <h3 className="mb-1 text-sm sm:text-lg font-semibold text-foreground">{item.title}</h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground text-pretty">{item.desc}</p>
+                    <p className="text-[10px] leading-tight sm:text-sm text-muted-foreground text-pretty">{item.desc}</p>
                   </div>
                 </Animate>
               ))}
