@@ -561,7 +561,7 @@ const Index = () => {
                       <item.icon className="h-5 w-5 sm:h-6 sm:w-6" />
                     </span>
                     <h3 className="mb-1 text-sm sm:text-lg font-semibold text-foreground">{item.title}</h3>
-                    <p className="text-xs sm:text-sm text-muted-foreground text-pretty">{item.desc}</p>
+                    <p className="text-[10px] leading-tight sm:text-sm text-muted-foreground text-pretty">{item.desc}</p>
                   </div>
                 </Animate>
               ))}
@@ -663,6 +663,10 @@ const Index = () => {
               <a href="https://t.me/+79384533173" target="_blank" rel="noopener noreferrer" className="underline underline-offset-2 transition-colors hover:text-foreground">Служба поддержки</a>
             </div>
             <p>© {new Date().getFullYear()} Все права защищены</p>
+            <p className="mt-2 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-5 py-2 text-sm font-semibold text-primary">
+              <Sparkles className="h-4 w-4" />
+              Сайт сделан на 100% с помощью ИИ
+            </p>
           </div>
         </div>
       </footer>
