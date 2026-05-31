@@ -16,9 +16,6 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 # Копируем конфиг Nginx
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Удаляем дефолтный конфиг
-RUN rm /etc/nginx/conf.d/default.conf 2>/dev/null; true
-
 # Открываем порт
 EXPOSE 80
 
