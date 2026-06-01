@@ -18,7 +18,7 @@ if [ -f yarn.lock ]; then ... elif [ -f package-lock.json ]; then npm ci --verbo
 1. `package-lock.json` не совпадал с `package.json` — это ломает `npm ci`.
 2. В проект снова попал `bun.lock` — Timeweb может из-за него неправильно определять сборку.
 
-Я синхронизировал `package-lock.json` и убрал `bun.lock`. После этого `npm ci` проходит локально.
+Я синхронизировал `package-lock.json`, убрал `bun.lock` и добавил lock-файлы других менеджеров в `.gitignore`. После этого `npm ci` проходит локально.
 
 ---
 
