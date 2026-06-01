@@ -5,7 +5,61 @@
 
 ---
 
-## Вариант 1 — рекомендую: Timeweb Cloud Apps через Docker
+## Что было не так по логу
+
+На скрине Timeweb запускает не Docker, а свой авто-билдер:
+
+```text
+if [ -f yarn.lock ]; then ... elif [ -f package-lock.json ]; then npm ci --verbose ...
+```
+
+И он падает на `npm ci`. Причины были две:
+
+1. `package-lock.json` не совпадал с `package.json` — это ломает `npm ci`.
+2. В проект снова попал `bun.lock` — Timeweb может из-за него неправильно определять сборку.
+
+Я синхронизировал `package-lock.json`, убрал `bun.lock` и добавил lock-файлы других менеджеров в `.gitignore`. После этого `npm ci` проходит локально.
+
+---
+
+## Вариант 1 — рекомендую сейчас: Netlify или Vercel + DNS на REG.RU
+
+Это самый простой путь для обычного React/Vite сайта. Timeweb сейчас тратит время на авто-сборку, а Netlify/Vercel такие проекты деплоят стабильнее.
+
+В репозиторий добавлены готовые конфиги:
+
+- `netlify.toml`
+- `vercel.json`
+
+### Netlify
+
+1. Зайди в Netlify → **Add new site** → **Import an existing project**.
+2. Подключи GitHub-репозиторий.
+3. Настройки должны подтянуться автоматически, но если спросит:
+
+| Поле | Значение |
+|------|----------|
+| **Build command** | `npm ci && npm run build` |
+| **Publish directory** | `dist` |
+| **Node version** | `20` |
+
+4. После успешного деплоя открой временный домен Netlify.
+5. В Netlify добавь домен `aikod.sergeichernenko.ru` и скопируй DNS-запись, которую он выдаст.
+6. В REG.RU добавь эту DNS-запись для поддомена `aikod`.
+
+### Vercel
+
+1. Зайди в Vercel → **Add New Project**.
+2. Импортируй GitHub-репозиторий.
+3. Framework: **Vite**.
+4. Настройки из `vercel.json` должны подхватиться автоматически:
+   - Build command: `npm ci && npm run build`
+   - Output directory: `dist`
+5. После деплоя добавь домен `aikod.sergeichernenko.ru` и пропиши DNS в REG.RU.
+
+---
+
+## Вариант 2 — если оставаться на Timeweb: только Docker-приложение
 
 Этот способ обходится без авто-детекта React/npm/bun в Timeweb. Timeweb просто собирает Docker-образ по `Dockerfile`.
 
@@ -44,7 +98,7 @@ npm run build
 
 ---
 
-## Вариант 2 — самый простой: REG.RU хостинг как статический сайт
+## Вариант 3 — самый простой вручную: REG.RU хостинг как статический сайт
 
 Если Timeweb Apps продолжает ломаться, можно вообще не использовать Cloud Apps.
 
@@ -91,21 +145,6 @@ RewriteRule . /index.html [L]
 
 ---
 
-## Вариант 3 — GitHub Pages / Netlify / Vercel + DNS на REG.RU
-
-Если цель — просто стабильно открыть сайт на домене, проще всего:
-
-1. Залить проект на GitHub
-2. Подключить репозиторий к Netlify или Vercel
-3. Указать:
-   - Build command: `npm ci && npm run build`
-   - Publish directory: `dist`
-4. В REG.RU добавить DNS-запись, которую выдаст сервис
-
-Это обычно надёжнее Cloud Apps для обычного React/Vite сайта.
-
----
-
 ## DNS для REG.RU
 
 Домен у тебя на REG.RU, поэтому DNS меняем там.
@@ -136,9 +175,10 @@ aikod.sergeichernenko.ru
 
 Я бы пошёл так:
 
-1. **Сначала Docker в Timeweb Cloud Apps** — потому что проект уже подготовлен под Docker, и это убирает проблему авто-детекта сборки.
-2. Если Timeweb снова падает — **Netlify/Vercel** для фронта, а домен оставить на REG.RU.
-3. Если нужен максимально простой ручной вариант — **REG.RU статический хостинг** и загрузка `dist`.
+1. **Netlify** — быстрее всего завести и привязать поддомен.
+2. **Vercel** — такой же надёжный вариант.
+3. **Timeweb Docker** — только если принципиально нужно остаться в Timeweb Apps.
+4. **REG.RU статический хостинг** — если хочется вообще без сборки на сервере.
 
 ---
 
@@ -150,6 +190,9 @@ aikod.sergeichernenko.ru
 package-lock.json
 Dockerfile
 nginx.conf
+netlify.toml
+vercel.json
+.npmrc
 ```
 
 И не должно быть:
