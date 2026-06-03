@@ -1,22 +1,20 @@
-# Этап 1: Сборка
-FROM node:20-alpine AS builder
+# syntax=docker/dockerfile:1
 
+# --- Build stage ---
+FROM node:20-alpine AS builder
 WORKDIR /app
-COPY package*.json ./
-RUN npm ci
+
+COPY package.json ./
+RUN npm install --legacy-peer-deps --no-audit --no-fund
+
 COPY . .
 RUN npm run build
 
-# Этап 2: Nginx для раздачи статики
-FROM nginx:alpine
+# --- Runtime stage ---
+FROM nginx:alpine AS runner
 
-# Копируем собранный проект
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Копируем конфиг Nginx
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-# Открываем порт
-EXPOSE 80
-
+EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
