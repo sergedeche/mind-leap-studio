@@ -25,6 +25,8 @@
 | Port | `8080` (берётся из `EXPOSE 8080`) |
 | Start command | пусто (используется `CMD` из Dockerfile) |
 | System dependencies | **пусто** |
+| Environment variables | для этого проекта — пусто. В других сайтах добавляй все `VITE_*` из локального `.env`, иначе фронт не соберётся. |
+| SPA fallback | включить (404 → `index.html`). В этом проекте уже есть свой `nginx.conf` с fallback, но галка в Timeweb не помешает. |
 
 Тариф — минимальный.
 
