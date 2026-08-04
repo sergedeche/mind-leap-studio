@@ -1,8 +1,9 @@
-name: Deploy to VDS
+name: Deploy to REG.RU Cloud
 
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -15,15 +16,21 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install --legacy-peer-deps --no-audit --no-fund
 
       - name: Build project
         run: npm run build
 
-      - name: Deploy to VDS
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+      - name: Copy dist to server
+        if: ${{ secrets.VPS_HOST != '' }}
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.VPS_HOST }}
@@ -34,7 +41,8 @@ jobs:
           strip_components: 1
           overwrite: true
 
-      - name: Restart Nginx
+      - name: Reload Nginx
+        if: ${{ secrets.VPS_HOST != '' }}
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.VPS_HOST }}
@@ -42,4 +50,4 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
             sudo nginx -t
-            sudo systemctl restart nginx
+            sudo systemctl reload nginx
