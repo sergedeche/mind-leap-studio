@@ -29,8 +29,14 @@ jobs:
           name: dist
           path: dist
 
+      - name: Check VPS secrets
+        id: vps
+        env:
+          VPS_HOST: ${{ secrets.VPS_HOST }}
+        run: echo "enabled=${{ env.VPS_HOST != '' }}" >> "$GITHUB_OUTPUT"
+
       - name: Copy dist to server
-        if: ${{ secrets.VPS_HOST != '' }}
+        if: steps.vps.outputs.enabled == 'true'
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.VPS_HOST }}
@@ -42,7 +48,7 @@ jobs:
           overwrite: true
 
       - name: Reload Nginx
-        if: ${{ secrets.VPS_HOST != '' }}
+        if: steps.vps.outputs.enabled == 'true'
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.VPS_HOST }}
