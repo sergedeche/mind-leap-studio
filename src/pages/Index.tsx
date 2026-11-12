@@ -4,7 +4,7 @@ import {
   Cpu, Zap, Clock, Users, Target, Briefcase, Building2,
   TrendingUp, Award, Shield, Lightbulb, BookOpen, Wrench,
   MessageSquare, BarChart3, Brain, Layers, Rocket, CheckCircle2,
-  MapPin, Calendar, ArrowRight, Sparkles, Play, BadgeCheck, ChevronLeft, ChevronRight,
+  MapPin, ArrowRight, Sparkles, Play, BadgeCheck, ChevronLeft, ChevronRight,
   Home, Menu, X
 } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpeg";
@@ -238,7 +238,6 @@ function NavBar() {
     { href: "#audience", label: "Для кого" },
     { href: "#program", label: "Программа" },
     { href: "#format", label: "Формат" },
-    { href: "#cta", label: "Стоимость" },
     { href: "#author", label: "Об авторе" },
     { href: "#reviews", label: "Отзывы" },
   ];
@@ -263,7 +262,7 @@ function NavBar() {
         {/* Right: CTA + mobile burger */}
         <div className="flex items-center gap-3">
           <a href="https://t.me/corphacker?direct" target="_blank" rel="noopener noreferrer" className="rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-all duration-200 hover:bg-primary/85 hover:shadow-[0_0_20px_-4px_hsl(var(--primary)/0.5)] active:scale-[0.97]">
-            Предзапись
+            Забронировать дату
           </a>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -341,7 +340,7 @@ const Index = () => {
           <Animate delay={300}>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <a href="https://t.me/corphacker?direct" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2.5 rounded-full bg-primary px-8 py-3.5 text-base font-semibold text-primary-foreground shadow-[0_0_30px_-5px_hsl(var(--primary)/0.5)] transition-all duration-300 hover:shadow-[0_0_50px_-5px_hsl(var(--primary)/0.7)] active:scale-[0.97]">
-                Предзапись
+                Забронировать дату
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </a>
               <a href="#learn" className="inline-flex items-center gap-2 rounded-full border border-border bg-card/40 px-6 py-3.5 text-sm font-medium text-foreground backdrop-blur-sm transition-all duration-200 hover:bg-card/70 hover:border-border/80">
@@ -568,40 +567,6 @@ const Index = () => {
             </div>
             </div>
           </GlassCard>
-        </Animate>
-      </Section>
-
-      {/* ── CTA ── */}
-      <Section id="cta" className="py-6 lg:py-8">
-        <Animate>
-          <div className="relative overflow-hidden rounded-3xl border border-primary/20 p-10 text-center sm:p-16 lg:p-20">
-            {/* Background effects */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-card/80 to-card" />
-            <div className="absolute -top-32 left-1/2 h-64 w-[600px] -translate-x-1/2 rounded-full bg-primary/20 blur-[120px]" />
-            <div className="absolute -bottom-32 left-1/2 h-48 w-[400px] -translate-x-1/2 rounded-full bg-primary/10 blur-[100px]" />
-            
-            <div className="relative z-10">
-              <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-xs font-medium tracking-wide text-primary">
-                <Calendar className="h-3.5 w-3.5" />
-                Ближайший мастер-класс
-              </span>
-              <h2 className="mb-4 text-3xl font-bold text-foreground sm:text-5xl text-balance">
-                Код стратегического превосходства
-              </h2>
-              <div className="mb-8 flex flex-wrap items-center justify-center gap-5 text-muted-foreground">
-                <span className="inline-flex items-center gap-1.5 text-sm"><Calendar className="h-4 w-4" /> Дата уточняется</span>
-                <span className="inline-flex items-center gap-1.5 text-sm"><MapPin className="h-4 w-4" /> Офлайн</span>
-              </div>
-              <p className="mb-10 text-5xl font-extrabold tracking-tight text-foreground sm:text-6xl">14 900 ₽</p>
-              <a href="https://t.me/corphacker?direct" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center gap-2.5 rounded-full bg-primary px-10 py-4 text-base font-semibold text-primary-foreground shadow-[0_0_40px_-5px_hsl(var(--primary)/0.5)] transition-all duration-300 hover:shadow-[0_0_60px_-5px_hsl(var(--primary)/0.7)] active:scale-[0.97]">
-                Оставить заявку
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              </a>
-              <p className="mt-8 text-sm text-muted-foreground text-pretty max-w-md mx-auto">
-                Возможно проведение корпоративного мероприятия. Для уточнения деталей обращайтесь по ссылке выше.
-              </p>
-            </div>
-          </div>
         </Animate>
       </Section>
 
